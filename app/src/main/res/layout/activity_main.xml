@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/tytul"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:gravity="center"
+        android:background="@drawable/gradient_tytul"
+        android:text="Lista studentów"
+        android:textStyle="bold"
+        android:textSize="30sp"/>
+    <LinearLayout
+        android:id="@+id/przyciski"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tytul"
+        android:layout_marginTop="5dp"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="dodaj_rekord"
+            android:text="Dodawanie studenta"
+            android:textStyle="bold"
+            android:textSize="30sp"
+            android:layout_below="@id/tytul"
+            android:background="@drawable/gradient_przycisk" />
+
+
+    </LinearLayout>
+    <TextView
+        android:id="@+id/liczba_studentow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/przyciski"
+        android:background="#7093DB"
+        android:textStyle="italic"
+        android:layout_marginTop="10dp"
+        android:textSize="15sp"
+        android:textColor="#fff"/>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:layout_below="@id/liczba_studentow">
+    <ListView
+        android:id="@+id/Lista"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/liczba_studentow"
+
+        android:layout_alignParentBottom="true"
+        android:background="#7093DB"/>
+    </ScrollView>
+</RelativeLayout>
